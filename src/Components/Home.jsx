@@ -13,9 +13,27 @@ const Home = () => {
         Bachrul Uluum
       </h2>
       <div className=" text-slate-400 flex pt-8 px-14 text-5xl justify-between">
-        <FaInstagram />
-        <FaGithub />
-        <FaTelegramPlane />
+        <a
+          href="https://instagram.com/uluumbch"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaInstagram />
+        </a>
+        <a
+          href="https://github.com/uluumbch"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
+        </a>
+        <a
+          href="https://t.me/uluumbch"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaTelegramPlane />
+        </a>
       </div>
       <div className="pt-12 flex flex-col text-center">
         <span className="w-5/6 mx-auto text-slate-300 px-2 py-4 bg-slate-700 rounded-3xl mb-5 shadow-inner shadow-slate-400">
