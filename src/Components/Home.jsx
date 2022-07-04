@@ -1,5 +1,6 @@
 import React from "react";
 import profile from "../profile.jpg";
+import profileyellow from "../profile-pic_yellow.png";
 import { FaInstagram } from "react-icons/fa";
 import { TbBrandTelegram } from "react-icons/tb";
 import { FiGithub } from "react-icons/fi";
@@ -7,19 +8,22 @@ import { FiGithub } from "react-icons/fi";
 const Home = () => {
   return (
     <div className="max-w-md bg-yellow-500 mx-auto -z-50 h-screen">
-      <img
-        src={profile}
-        className="w-64 mx-auto rounded-full border-4 border-slate-50"
-      />
-      <h2
-        className="text-3xl text-center
+      <div className="pt-4">
+        <img
+          src={profileyellow}
+          alt="Bachrul Uluum"
+          className="w-64 mx-auto rounded-full border-4 border-slate-50"
+        />
+        <h2
+          className="text-3xl text-center font-semibold
        text-slate-900"
-      >
-        Bachrul Uluum
-      </h2>
-      <span className="text-center mx-auto text-lg">
-        <h3>Junior Programmer</h3>
-      </span>
+        >
+          Bachrul Uluum
+        </h2>
+        <span className="text-center mx-auto text-lg">
+          <h3>Junior Programmer</h3>
+        </span>
+      </div>
       <div className=" text-slate-900 flex pt-8 px-14 text-5xl justify-between">
         <a
           href="https://instagram.com/uluumbch"
