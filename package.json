@@ -2,7 +2,7 @@
   "name": "bio-link",
   "version": "0.2.0",
   "private": true,
-  "homepage": "https://uluumbch.github.io/bio-link",
+  "homepage": "https://bio.uluumbch.my.id",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
