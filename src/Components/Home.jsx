@@ -40,7 +40,7 @@ const Home = () => {
           <FiGithub />
         </a>
         <a className="my-auto"
-          href="https://t.me/uluumbch"
+          href="https://linkedin.com/in/bachrul-uluum"
           target="_blank"
           rel="noopener noreferrer"
         >
