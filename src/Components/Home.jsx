@@ -1,8 +1,8 @@
 import React from "react";
-import profile from "../profile.jpg";
 import profileyellow from "../profile-pic_yellow.png";
 import { FaInstagram } from "react-icons/fa";
 import { TbBrandTelegram } from "react-icons/tb";
+import { TbBrandLinkedin } from "react-icons/tb";
 import { FiGithub } from "react-icons/fi";
 
 const Home = () => {
@@ -21,25 +21,32 @@ const Home = () => {
           Bachrul Uluum
         </h2>
         <span className="text-center mx-auto text-lg">
-          <h3>Junior Programmer</h3>
+          <h3 >Junior Programmer</h3>
         </span>
       </div>
       <div className=" text-slate-900 flex pt-8 px-14 text-5xl justify-between">
-        <a
+        <a className="my-auto"
           href="https://instagram.com/uluumbch"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaInstagram />
         </a>
-        <a
+        <a className="my-auto"
           href="https://github.com/uluumbch"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FiGithub />
         </a>
-        <a
+        <a className="my-auto"
+          href="https://t.me/uluumbch"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <TbBrandLinkedin size={"1.15em"} />
+        </a>
+        <a className="my-auto"
           href="https://t.me/uluumbch"
           target="_blank"
           rel="noopener noreferrer"
