@@ -6,7 +6,7 @@ function App() {
     <div className="bg-orange-400">
       <Home />
     </div>
-  );
+  )
 }
 
 export default App;
