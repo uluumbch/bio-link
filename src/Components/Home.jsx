@@ -29,6 +29,7 @@ const Home = () => {
           href="https://instagram.com/uluumbch"
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event="instagram button"
         >
           <FaInstagram />
         </a>
@@ -36,6 +37,7 @@ const Home = () => {
           href="https://github.com/uluumbch"
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event="github button"
         >
           <FiGithub />
         </a>
@@ -43,6 +45,7 @@ const Home = () => {
           href="https://linkedin.com/in/bachrul-uluum"
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event="linkedin button"
         >
           <TbBrandLinkedin size={"1.15em"} />
         </a>
@@ -50,6 +53,7 @@ const Home = () => {
           href="https://t.me/uluumbch"
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event="telegram button"
         >
           <TbBrandTelegram />
         </a>
@@ -60,6 +64,7 @@ const Home = () => {
           href="https://portfolio.uluumbch.my.id/"
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event="portfolio button"
         >
           Portfolio
         </a>
@@ -73,6 +78,7 @@ const Home = () => {
           href="https://uluumbch.my.id/"
           target="_blank"
           rel="noopener noreferrer"
+          data-umami-event="blog button"
         >
           Blog
         </a>
