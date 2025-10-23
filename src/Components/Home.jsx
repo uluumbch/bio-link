@@ -21,7 +21,7 @@ const Home = () => {
           Bachrul Uluum
         </h2>
         <span className="text-center mx-auto text-lg">
-          <h3 >Junior Programmer</h3>
+          <h3 >Programmer</h3>
         </span>
       </div>
       <div className=" text-slate-900 flex pt-8 px-14 text-5xl justify-between">
@@ -61,7 +61,7 @@ const Home = () => {
       <div className="pt-12 flex flex-col text-center">
         <a
           className="text-xl w-5/6 mx-auto bg-rose-600 text-slate-900 px-2 py-4 mb-5 relative z-[20] border-2 border-gray-50 drop-shadow-[7px_7px_black] ease-in-out duration-400 transition-all duration-700 hover:bg-slate-900 hover:text-white hover:drop-shadow-none"
-          href="https://portfolio.uluumbch.my.id/"
+          href="https://www.linkedin.com/in/bachrul-uluum/details/projects/"
           target="_blank"
           rel="noopener noreferrer"
           data-umami-event="portfolio button"
@@ -69,9 +69,9 @@ const Home = () => {
           Portfolio
         </a>
 
-        <span className="text-xl w-5/6 mx-auto bg-rose-600 text-slate-900 px-2 py-4 mb-5 relative z-[20] border-2 border-gray-50 drop-shadow-[7px_7px_black] ease-in-out duration-400 transition-all duration-700 hover:bg-slate-900 hover:text-white hover:drop-shadow-none">
+        {/* <span className="text-xl w-5/6 mx-auto bg-rose-600 text-slate-900 px-2 py-4 mb-5 relative z-[20] border-2 border-gray-50 drop-shadow-[7px_7px_black] ease-in-out duration-400 transition-all duration-700 hover:bg-slate-900 hover:text-white hover:drop-shadow-none">
           Resume
-        </span>
+        </span> */}
 
         <a
           className="text-xl w-5/6 mx-auto bg-rose-600 text-slate-900 px-2 py-4 mb-5 relative z-[20] border-2 border-gray-50 drop-shadow-[7px_7px_black] ease-in-out duration-400 transition-all duration-700 hover:bg-slate-900 hover:text-white hover:drop-shadow-none"
