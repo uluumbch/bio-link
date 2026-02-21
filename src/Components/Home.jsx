@@ -1,105 +1,65 @@
-import React from "react";
+import { useState } from "react";
 import profileyellow from "../profile-pic_yellow.png";
-import { FaInstagram } from "react-icons/fa";
-import { TbBrandTelegram } from "react-icons/tb";
-import { TbBrandLinkedin } from "react-icons/tb";
-import { FiGithub } from "react-icons/fi";
+import ProfileHeader from "./ProfileHeader";
+import SocialLinks from "./SocialLinks";
+import Tabs from "./Tabs";
+import SwipeableContainer from "./SwipeableContainer";
+import LinksTab from "./LinksTab";
+import AboutTab from "./AboutTab";
+import ProjectsTab from "./ProjectsTab";
+
+const tabs = [
+  { id: "links", label: "Links", component: LinksTab },
+  { id: "about", label: "About", component: AboutTab },
+  { id: "projects", label: "Projects", component: ProjectsTab },
+];
 
 const Home = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const handleSwipeLeft = () => {
+    if (activeTab < tabs.length - 1) {
+      setActiveTab(activeTab + 1);
+    }
+  };
+
+  const handleSwipeRight = () => {
+    if (activeTab > 0) {
+      setActiveTab(activeTab - 1);
+    }
+  };
+
+  const ActiveComponent = tabs[activeTab].component;
+
   return (
-    <div className="max-w-md bg-yellow-500 mx-auto -z-50 h-screen">
-      <div className="pt-4">
-        <img
-          src={profileyellow}
-          alt="Bachrul Uluum"
-          className="w-64 mx-auto rounded-full border-4 border-slate-50"
-        />
-        <h2
-          className="text-3xl text-center font-semibold
-       text-slate-900"
-        >
-          Bachrul Uluum
-        </h2>
-        <span className="text-center mx-auto text-lg">
-          <h3 >Programmer</h3>
-        </span>
-      </div>
-      <div className=" text-slate-900 flex pt-8 px-14 text-5xl justify-between">
-        <a className="my-auto"
-          href="https://instagram.com/uluumbch"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-umami-event="instagram button"
-        >
-          <FaInstagram />
-        </a>
-        <a className="my-auto"
-          href="https://github.com/uluumbch"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-umami-event="github button"
-        >
-          <FiGithub />
-        </a>
-        <a className="my-auto"
-          href="https://linkedin.com/in/bachrul-uluum"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-umami-event="linkedin button"
-        >
-          <TbBrandLinkedin size={"1.15em"} />
-        </a>
-        <a className="my-auto"
-          href="https://t.me/uluumbch"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-umami-event="telegram button"
-        >
-          <TbBrandTelegram />
-        </a>
-      </div>
-      <div className="pt-12 flex flex-col text-center">
-        <a
-          className="text-xl w-5/6 mx-auto bg-rose-600 text-slate-900 px-2 py-4 mb-5 relative z-[20] border-2 border-gray-50 drop-shadow-[7px_7px_black] ease-in-out duration-400 transition-all duration-700 hover:bg-slate-900 hover:text-white hover:drop-shadow-none"
-          href="https://www.linkedin.com/in/bachrul-uluum/details/projects/"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-umami-event="portfolio button"
-        >
-          Portfolio
-        </a>
+    <div className="max-w-md bg-yellow-500 mx-auto min-h-screen pb-8">
+      <ProfileHeader
+        image={profileyellow}
+        name="Bachrul Uluum"
+        subtitle="Programmer"
+      />
+      <SocialLinks />
+      <Tabs tabs={tabs} activeTab={activeTab} onTabChange={setActiveTab} />
 
-        {/* <span className="text-xl w-5/6 mx-auto bg-rose-600 text-slate-900 px-2 py-4 mb-5 relative z-[20] border-2 border-gray-50 drop-shadow-[7px_7px_black] ease-in-out duration-400 transition-all duration-700 hover:bg-slate-900 hover:text-white hover:drop-shadow-none">
-          Resume
-        </span> */}
+      <SwipeableContainer
+        onSwipeLeft={handleSwipeLeft}
+        onSwipeRight={handleSwipeRight}
+      >
+        <div className="transition-opacity duration-300">
+          <ActiveComponent />
+        </div>
+      </SwipeableContainer>
 
-        <a
-          className="text-xl w-5/6 mx-auto bg-rose-600 text-slate-900 px-2 py-4 mb-5 relative z-[20] border-2 border-gray-50 drop-shadow-[7px_7px_black] ease-in-out duration-400 transition-all duration-700 hover:bg-slate-900 hover:text-white hover:drop-shadow-none"
-          href="https://uluumbch.my.id/"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-umami-event="blog button"
-        >
-          Blog
-        </a>
-
-        <a
-          className="text-xl w-5/6 mx-auto bg-rose-600 text-slate-900 px-2 py-4 mb-5 relative z-[20] border-2 border-gray-50 drop-shadow-[7px_7px_black] ease-in-out duration-400 transition-all duration-700 hover:bg-slate-900 hover:text-white hover:drop-shadow-none"
-          href="https://n8n.io/creators/uluumbch"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-umami-event="n8n creator button"
-        >
-          n8n templates
-        </a>
-
-
-        {/* <span className="w-5/6 mx-auto text-slate-300 px-2 py-4 bg-slate-700 rounded-3xl mb-5 shadow-inner shadow-slate-400">
-          Website
-        </span>
-        <span className="w-5/6 mx-auto text-slate-300 px-2 py-4 bg-slate-700 rounded-3xl mb-5 shadow-inner shadow-slate-400">
-          Website
-        </span> */}
+      {/* Swipe indicator for mobile */}
+      <div className="flex justify-center gap-3 pt-6">
+        {tabs.map((_, index) => (
+          <div
+            key={index}
+            className={`h-3 border-2 border-slate-900 transition-all duration-200 ${
+              activeTab === index ? "bg-slate-900 w-8" : "bg-white w-3"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );
