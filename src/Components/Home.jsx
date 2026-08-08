@@ -92,6 +92,16 @@ const Home = () => {
         >
           n8n templates
         </a>
+        
+        <a
+          className="text-xl w-5/6 mx-auto bg-rose-600 text-slate-900 px-2 py-4 mb-5 relative z-[20] border-2 border-gray-50 drop-shadow-[7px_7px_black] ease-in-out duration-400 transition-all duration-700 hover:bg-slate-900 hover:text-white hover:drop-shadow-none"
+          href="https://app.notion.com/@uluumbch"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-umami-event="n8n creator button"
+        >
+          notion templates
+        </a>
 
 
         {/* <span className="w-5/6 mx-auto text-slate-300 px-2 py-4 bg-slate-700 rounded-3xl mb-5 shadow-inner shadow-slate-400">
